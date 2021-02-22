@@ -4,6 +4,13 @@ helm:
   chart: rancher-backup
   repo: https://charts.rancher.io
   values:
-    persistence:
+    s3:
       enabled: true
-      storageClass: longhorn-unreplicated
+      credentialSecretName: s3-creds
+      credentialSecretNamespace: default
+      bucketName: rancher-backup
+      folder: ecm1
+      region: us-east-1
+      endpoint: s3.us-east-1.amazonaws.com
+    persistence:
+      enabled: false
