@@ -8,7 +8,7 @@ helm:
       enabled: true
       credentialSecretName: s3-creds
       credentialSecretNamespace: default
-      bucketName: rancher-backup
+      bucketName: rancher-backup-e1
       folder: ecm1
       region: us-east-1
       endpoint: s3.us-east-1.amazonaws.com
